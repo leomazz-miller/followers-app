@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'; 
-import { HttpModule } from "@angular/http";
+import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -24,7 +24,8 @@ import { GithubFollowersService } from './github-followers/github-followers.serv
     HttpModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'followers', component: GithubFollowersComponent }
+      { path: 'followers', component: GithubFollowersComponent },
+      /* { path: 'followers/:id/:login', component: GithubProfileComponent } */
     ])
   ],
   providers: [
